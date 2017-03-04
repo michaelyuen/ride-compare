@@ -1,14 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar color="primary">
+    	<ion-title>Hello Lucy</ion-title>
+  	</ion-navbar>
+
+  	<ion-toolbar color="primary">
+    	<form>
+      		<ion-searchbar id="autocomplete" type="search" placeholder="Where to?" (search)="search($event)" (ionClear)="clearCards()"></ion-searchbar>
+    	</form>
+  	</ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+  	<div id="map"></div>
+
+    <ion-card *ngFor="let card of uiCards; let i = index" [@flyInOut]="'in' + i">
+      	<ion-card-header>
+        	{{card.name}}
+      	</ion-card-header>
+      	<ion-card-content>
+       		Blah Blah Blah
+      	</ion-card-content>
+    </ion-card>
+
 </ion-content>
