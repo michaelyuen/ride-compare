@@ -1,0 +1,11 @@
+<ion-header>
+	<ion-navbar color="primary">
+    	<ion-title>Hello Lucy</ion-title>
+  	</ion-navbar>
+
+  	<ion-toolbar color="primary">
+    	<form>
+      		<ion-searchbar id="autocomplete" type="search" placeholder="Where to?" (search)="search($event)" (ionClear)="clearCards()"></ion-searchbar>
+    	</form>
+  	</ion-toolbar>
+</ion-header>
